@@ -1,3 +1,3 @@
-<img src="https://rawgit.com/gorangajic/react-icons/master/react-icons.svg" width="60" alt="Template Tajam">
+<img src="https://i.imgur.com/P9Lenjy.png" width="60" alt="Template Tajam">
 
 ## [Template Tajam](https://github.com/SaliMike/template-tajam)
