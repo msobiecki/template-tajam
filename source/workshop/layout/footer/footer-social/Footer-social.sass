@@ -1,0 +1,28 @@
+.footer-social
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  +max(767px)
+    justify-content: center
+
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 35px
+    height: 35px
+    margin-right: 8px
+    transition: .2s
+    border: 1px solid $white
+    border-radius: 100%
+    color: $white
+    cursor: pointer
+    +max(767px)
+      margin: 4px
+
+    &:last-of-type
+      margin-right: 0
+
+    &:hover
+      border: 1px solid $robins-egg-blue
+      color: $robins-egg-blue

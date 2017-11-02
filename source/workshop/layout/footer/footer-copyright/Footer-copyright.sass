@@ -1,0 +1,35 @@
+.footer-copyright
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+  +max(767px)
+    justify-content: center
+
+  &__item
+    +max(767px)
+      width: 100%
+      margin-bottom: 10px
+      text-align: center
+
+  &__link
+    margin-right: 15px
+    transition: .2s
+    +rem(font-size, 14px)
+    color: $white
+    font-weight: 100
+    line-height: 1.8
+    text-decoration: none
+    cursor: pointer
+    +max(767px)
+      margin: 4px 7px
+
+    &:hover
+      color: $robins-egg-blue
+
+  &__text
+    +rem(font-size, 14px)
+    color: $white
+    font-weight: 100
+    line-height: 1.8
+    cursor: default

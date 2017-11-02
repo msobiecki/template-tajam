@@ -1,0 +1,61 @@
+.footer
+  display: flex
+  position: relative
+  width: 100%
+  background-color: $bunting
+  overflow: hidden
+
+  &__overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    &::after
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(135deg, $black-rock-85 0%, $valhalla 100%);
+      content: ''
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d909062f', endColorstr='#d9301d5e',GradientType=1 );
+
+  &__background
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    min-width: 100%
+    min-height: 100%
+    transform: translate(-50%, -50%)
+
+  &__content
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 65px 0
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+
+  &__item
+    display: block
+    width: 33.33%
+    padding: 10px
+    +max(969px)
+      width: 50%
+    +max(767px)
+      width: 100%
+
+    &.-long
+      width: 100%
+
