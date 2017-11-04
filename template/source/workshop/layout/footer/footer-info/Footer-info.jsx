@@ -8,22 +8,22 @@ import IconPhone from 'react-icons/lib/io/ios-telephone-outline';
 class FooterInfo extends Component {
 	render() {
 		return (
-			<div className="footer-info">
-				<h3 className="footer-info__title">{this.props.title}</h3>
-				<div className="footer-info__list">
-					<div className="footer-info__item">
-						<div className="footer-info__icon">
+			<div class="footer-info">
+				<h3 class="footer-info__title">{this.props.title}</h3>
+				<div class="footer-info__list">
+					<div class="footer-info__item">
+						<div class="footer-info__icon">
 							<IconMarker size={22} />
 						</div>
-						<div className="footer-info__text">
+						<div class="footer-info__text">
 						{this.props.list[0].text}
 						</div>
 					</div>
-					<div className="footer-info__item">
-						<div className="footer-info__icon">
+					<div class="footer-info__item">
+						<div class="footer-info__icon">
 							<IconPhone size={22} />
 						</div>
-						<a href={this.props.list[1].url} className="footer-info__text">
+						<a href={this.props.list[1].url} class="footer-info__text">
 							{this.props.list[1].text}
 						</a>
 					</div>

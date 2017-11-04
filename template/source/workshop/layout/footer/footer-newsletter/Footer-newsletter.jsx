@@ -7,13 +7,13 @@ import IconPlane from 'react-icons/lib/io/ios-paperplane-outline';
 class FooterNewsletter extends Component {
 	render() {
 		return (
-			<div className="footer-newsletter">
-				<h3 className="footer-newsletter__title">{this.props.title}</h3>
-				<div className="footer-newsletter__content">
-					<form className="footer-newletter__form">
-						<div className="footer-newsletter__inputbox">
-							<input className="footer-newsletter__input" type="email" name="footer-newsletter-email" placeholder={this.props.input.placeholder} required />
-							<button className="footer-newsletter__button">
+			<div class="footer-newsletter">
+				<h3 class="footer-newsletter__title">{this.props.title}</h3>
+				<div class="footer-newsletter__content">
+					<form class="footer-newsletter__form">
+						<div class="footer-newsletter__inputbox">
+							<input class="footer-newsletter__input" type="email" name="footer-newsletter-email" placeholder={this.props.input.placeholder} required />
+							<button class="footer-newsletter__button">
 								<IconPlane size={30} />
 							</button>
 						</div>

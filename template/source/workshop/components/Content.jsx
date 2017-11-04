@@ -8,7 +8,7 @@ import Schedule from './schedule/Schedule';
 class Content extends Component {
 	render() {
 		return (
-			<div className="content">
+			<div class="content">
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route path='/roster' component={Roster} />

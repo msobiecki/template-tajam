@@ -6,11 +6,11 @@ import styles from './Footer-brand.sass';
 class FooterBrand extends Component {
 	render() {
 		return (
-			<div className="footer-brand">
-				<div className="footer-brand__logobox">
+			<div class="footer-brand">
+				<div class="footer-brand__logobox">
 					<img src={this.props.logo.image} alt={this.props.logo.text} />
 				</div>
-				<div className="footer-brand__text">
+				<div class="footer-brand__text">
 					{this.props.text}
 				</div>
 			</div>

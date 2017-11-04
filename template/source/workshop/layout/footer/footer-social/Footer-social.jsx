@@ -12,23 +12,23 @@ import IconYoutube from 'react-icons/lib/io/social-youtube';
 class FooterSocial extends Component {
 	render() {
 		return (
-			<div className="footer-social">
-				<a href="#" target="_blank" className="footer-social__item">
+			<div class="footer-social">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconFacebook size={18} />
 				</a>
-				<a href="#" target="_blank" className="footer-social__item">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconTwitter size={18} />
 				</a>
-				<a href="#" target="_blank" className="footer-social__item">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconDribbble size={18} />
 				</a>
-				<a href="#" target="_blank" className="footer-social__item">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconInstagram size={18} />
 				</a>
-				<a href="#" target="_blank" className="footer-social__item">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconGoogleplus size={18} />
 				</a>
-				<a href="#" target="_blank" className="footer-social__item">
+				<a href="#" target="_blank" class="footer-social__item">
 					<IconYoutube size={18} />
 				</a>
 			</div>

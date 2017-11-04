@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="wrapper" data-reactroot>
+        <div class="wrapper">
           <Header />
           <Content />
           <Footer />
