@@ -31,6 +31,8 @@
         "eqeqeq": 0,
         "func-names": 0,
         "valid-typeof": 1,
-        "react/no-unknown-property": [2, {"ignore": ["class", "for"]}]
+        "react/no-unknown-property": [2, {
+            "ignore": ["class", "for"]
+        }]
     }
 }
