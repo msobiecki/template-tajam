@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="wrapper">
-        {/* <Header />*/}
+        {/* <Header /> */}
         <Content />
         <Footer />
       </div>

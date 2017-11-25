@@ -1,1 +1,23 @@
 .contact
+  display: block
+  width: 100%
+  padding: 60px 0
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    width: 100%
+
+    +max(969px)
+      flex-wrap: wrap
+
+  &__item
+    display: block
+    width: 50%
+    padding: 10px
+
+    +max(969px)
+      width: 100%
+
