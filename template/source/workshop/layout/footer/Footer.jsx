@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Footer.sass';
-import FooterBackgroundImage from './images/footer-background.jpg';
+import BackgroundImage from './images/footer-background.jpg';
 
 import FooterBrand from './footer-brand/Footer-brand';
 import FooterInfo from './footer-info/Footer-info';
@@ -14,7 +14,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__overlay">
-        <img className="footer__background" src={FooterBackgroundImage} alt="Footer Background" />
+        <img className="footer__background" src={BackgroundImage} alt="Footer Background" />
       </div>
       <div className="footer__content">
         <div className="footer__container">

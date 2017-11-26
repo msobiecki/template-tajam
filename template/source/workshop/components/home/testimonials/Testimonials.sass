@@ -1,4 +1,4 @@
-.footer
+.testimonials
   display: flex
   position: relative
   width: 100%
@@ -19,7 +19,7 @@
       bottom: 0
       left: 0
       background: linear-gradient(135deg, $black-rock-85 0%, $valhalla 100%)
-      content: ''
+      content: ""
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d909062f', endColorstr='#d9301d5e',GradientType=1 )
 
   &__background
@@ -41,21 +41,3 @@
 
   &__container
     +container
-
-  &__box
-    display: flex
-    flex-wrap: wrap
-    width: 100%
-
-  &__item
-    display: block
-    width: 33.33%
-    padding: 10px
-    +max(969px)
-      width: 50%
-    +max(767px)
-      width: 100%
-
-    &.-long
-      width: 100%
-
