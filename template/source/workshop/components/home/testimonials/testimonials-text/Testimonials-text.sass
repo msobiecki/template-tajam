@@ -1,21 +1,32 @@
 .testimonials-text
   display: block
+  position: relative
   width: 100%
+
+  &__slider
+    display: block
+    width: 100%
 
   &__item
     display: block
     width: 100%
+    padding: 10px 0
+
+  &__inner
+    display: block
+    width: 100%
+    max-width: 830px
+    margin: 0 auto
 
   &__text
     display: block
     width: 100%
-    max-width: 830px
-    margin: 0 auto 25px
     color: $white
     font-size: 16px
     line-height: 1.2
     text-align: center
     cursor: default
+    opacity: 0.85
 
     +font-playfair
 
