@@ -1,11 +1,13 @@
 import React from 'react';
 
-import Contact from './contact/Contact';
+import Works from './works/Works';
 import Testimonials from './testimonials/Testimonials';
+import Contact from './contact/Contact';
 
 function Home() {
   return (
     <div className="home">
+      <Works />
       <Testimonials />
       <Contact />
     </div>

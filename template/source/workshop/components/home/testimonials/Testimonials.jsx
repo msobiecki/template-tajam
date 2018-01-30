@@ -4,7 +4,6 @@ import './Testimonials.sass';
 import BackgroundImage from './images/testimonials-background.jpg';
 
 import TestimonialsText from './testimonials-text/Testimonials-text';
-import TestimonialsPerson from './testimonials-person/Testimonials-person';
 
 function Testimonials() {
   return (
@@ -15,7 +14,6 @@ function Testimonials() {
       <div className="testimonials__content">
         <div className="testimonials__container">
           <TestimonialsText />
-          <TestimonialsPerson />
         </div>
       </div>
     </div>
