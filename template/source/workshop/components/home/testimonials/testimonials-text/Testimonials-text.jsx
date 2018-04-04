@@ -27,7 +27,6 @@ class TestimonialsText extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      afterChange: this.changeSlider,
     };
 
     return (
