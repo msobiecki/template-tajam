@@ -1,0 +1,122 @@
+.works
+  display: block
+  width: 100%
+  padding: 60px 0
+  background-color: $white
+
+  +max(767px)
+    padding: 30px 0
+
+
+  &__container
+    +container
+
+  &__header
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+  &__title
+    display: inline-block
+    margin-bottom: 15px
+    color: $ship-gray
+    font-size: 2.2rem
+    font-weight: bold
+    cursor: default
+
+    +font-playfair
+    +max(767px)
+      width: 100%
+      text-align: center
+
+  &__link
+    display: inline-flex
+    align-items: center
+    transition: 0.2s
+    color: $ship-gray
+    font-size: 1.4rem
+    font-weight: normal
+    text-decoration: none
+    cursor: pointer
+
+    +max(767px)
+      display: none
+
+
+    &:hover
+      color: $robins-egg-blue
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    padding: 60px 0
+
+    +max(767px)
+      padding: 30px 0
+
+
+    .slick-list
+      +min(1024px)
+        display: block
+        width: 100%
+
+    .slick-track
+      +min(1024px)
+        display: flex
+        flex-wrap: wrap
+        width: 100% !important
+
+    .slick-slide
+      +min(1024px)
+        width: 25% !important
+        float: none
+
+        & > div
+          display: flex
+
+    .slick-dots
+      position: relative
+      bottom: inherit
+      margin: 15px auto 0
+
+  &__item
+    display: block
+    position: relative
+    width: 25%
+    height: 200px
+    background-color: $mercury
+    overflow: hidden
+
+    +max(1024px)
+      width: 50%
+
+
+    +max(610px)
+      width: 100%
+
+  &__work
+    display: block
+    width: 100%
+    height: 100%
+    transform: scale(1, 1)
+    transition: 0.2s
+
+    &:hover
+      transform: scale(1.1, 1.1)
+
+  &__image
+    position: absolute
+    top: 50%
+    left: 50%
+    min-width: 100%
+    min-height: 100%
+    transform: translate(-50%, -50%)
+
+  &__footer
+    display: block
+    width: 100%
+    text-align: center
+
+  &__button
+    +btn

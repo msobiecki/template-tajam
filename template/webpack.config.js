@@ -11,21 +11,30 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 /* Paths */
 const paths = {
   srcPath: path.join(__dirname, 'source'),
+  distPath: path.join(__dirname, 'dist'),
   assetsPath: path.join(__dirname, 'dist/assets/'),
   utilsPath: path.join(__dirname, 'source/utils/'),
-  distPath: path.join(__dirname, 'dist'),
+  modulesPath: path.join(__dirname, 'source/modules/'),
 };
 
 /* Node Environment */
 const isProduction = process.env.NODE_ENV === 'production';
 
 /* Entery */
-const entry = './index.jsx';
+const entry = {
+  app: [
+    require.resolve('react-dev-utils/webpackHotDevClient'),
+    require.resolve('react-error-overlay'),
+    './index.js'
+  ],
+};
 
 /* Output */
 const output = {
   path: paths.distPath,
-  filename: 'app.min.js',
+  pathinfo: true,
+  publicPath: "/",
+  filename: 'scripts/[name].min.js'
 };
 
 /* ----------------------------- */
@@ -40,8 +49,10 @@ plugins.push(new HtmlWebpackPlugin({
     removeComments: true,
   },
   hash: true,
-  filename: 'index.html',
+  inject: true,
+  chunks: ["app"],
   template: 'index.html',
+  filename: 'index.html',
 }));
 
 if (!isProduction) {
@@ -49,8 +60,8 @@ if (!isProduction) {
   plugins.push(new webpack.NamedModulesPlugin());
 } else {
   plugins.push(new ExtractTextPlugin({
-    filename: 'styles.min.css',
-    allChunks: true,
+    filename: 'styles/[name].min.css',
+    allChunks: false,
   }));
 }
 
@@ -76,7 +87,7 @@ const sassDevelop = [{
 }, {
   loader: 'sass-resources-loader',
   options: {
-    resources: [paths.utilsPath + '_colors.sass', paths.utilsPath + '_mixins.sass']
+    resources: [paths.utilsPath + 'styles/_colors.sass', paths.utilsPath + 'styles/_mixins.sass']
   },
 }];
 
@@ -104,7 +115,7 @@ const sassProduction = ExtractTextPlugin.extract({
   }, {
     loader: 'sass-resources-loader',
     options: {
-      resources: [paths.utilsPath + '_colors.sass', paths.utilsPath + '_mixins.sass']
+      resources: [paths.utilsPath + 'styles/_colors.sass', paths.utilsPath + 'styles/_mixins.sass']
     },
   }],
 });
@@ -117,15 +128,15 @@ const sassConfig = isProduction ? sassProduction : sassDevelop;
 
 // Develop configuration
 const cssDevelop = [{
-    loader: 'style-loader',
-  }, {
-    loader: 'css-loader',
-    options: {
-      minimize: false,
-      sourceMap: true,
-      camelCase: true,
-    },
-  }];
+  loader: 'style-loader',
+}, {
+  loader: 'css-loader',
+  options: {
+    minimize: false,
+    sourceMap: true,
+    camelCase: true,
+  },
+}];
 
 // Build configuration
 const cssProduction = ExtractTextPlugin.extract({
@@ -174,12 +185,22 @@ const fileConfig = {
 /* ----------------------------- */
 const devServer = {
   contentBase: paths.distPath,
+  host: '0.0.0.0',
+  overlay: false,
 
   // quiet: false,
   // noInfo: false,
-  // historyApiFallback: false,
+  historyApiFallback: {
+    rewrites: [
+      { from: /^\/$/, to: '/index.html' },
+      { from: /^\/admin/, to: '/admin/index.html' },
+      { from: /^\/register/, to: '/register/index.html' },
+      { from: /^\/login/, to: '/login/index.html' },
+      { from: /^\/logout/, to: '/logout/index.html' },
+      { from: /./, to: '/views/404.html' }
+    ]
+  },
   compress: true,
-  port: 9000,
   hot: true,
   open: false,
 };
@@ -188,14 +209,13 @@ const devServer = {
 /* Module                       */
 /* ----------------------------- */
 module.exports = {
-  devtool: !isProduction ? 'inline-sourcemap' : false,
+  //devtool: !isProduction ? 'inline-sourcemap' : false,
+  devtool: false,
   devServer,
 
   context: paths.srcPath,
 
-  entry: {
-    app: entry,
-  },
+  entry: entry,
   output,
 
   resolve: {
@@ -211,7 +231,7 @@ module.exports = {
       test: /\.(css)$/,
       use: cssConfig,
     }, {
-      test: /\.jsx?$/,
+      test: /\.(jsx|js)?$/,
       exclude: /(node_modules)/,
       use: jsConfig,
     },

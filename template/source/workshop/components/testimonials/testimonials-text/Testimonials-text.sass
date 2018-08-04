@@ -1,0 +1,78 @@
+.testimonials-text
+  display: block
+  position: relative
+  width: 100%
+
+  .slick-track
+    display: flex
+
+  .slick-slide
+      display: flex
+      align-items: center
+      justify-content: center
+      height: auto
+
+  &__slider
+    display: block
+    width: 100%
+
+  &__item
+    display: block
+    width: 100%
+    padding: 10px 0
+
+  &__inner
+    display: block
+    width: 100%
+    max-width: 830px
+    margin: 0 auto
+
+  &__text
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    color: $white
+    font-size: 1.6rem
+    line-height: 1.2
+    text-align: center
+    cursor: default
+    opacity: 0.85
+
+    +font-playfair
+
+  &__author
+    display: block
+    margin-bottom: 3px
+    color: $white
+    font-size: 1.4rem
+    font-weight: bold
+    text-align: center
+    cursor: default
+
+  &__rank
+    display: block
+    color: $white
+    font-size: 1.3rem
+    font-weight: 100
+    text-align: center
+    cursor: default
+
+  &__imagebox
+    display: block
+    width: 72px
+    height: 72px
+    margin: 15px auto
+
+  &__image
+    display: block
+    width: auto
+    max-width: 72px
+    height: auto
+    max-height: 72px
+    margin: 0 auto
+
+
+  .slick-arrow
+    +max(969px)
+      display: none !important
+

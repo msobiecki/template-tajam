@@ -4,5 +4,11 @@
     "react"
   ],
   "plugins": [
+    "transform-es2015-arrow-functions",
+    "transform-es2015-destructuring",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-runtime",
+    "transform-async-to-generator"
   ]
 }

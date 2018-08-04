@@ -29,8 +29,8 @@ rules:
   no-duplicate-properties: 0
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 1
-  no-important: 1
+  no-ids: 0
+  no-important: 0
   no-invalid-hex: 1
   no-mergeable-selectors: 1
   no-misspelled-properties: 1
@@ -41,7 +41,7 @@ rules:
   no-universal-selectors: 0
   no-url-domains: 1
   no-url-protocols: 1
-  no-vendor-prefixes: 1
+  no-vendor-prefixes: 0
   no-warn: 1
   property-units: 0
 
@@ -49,7 +49,7 @@ rules:
   declarations-before-nesting: 1
   force-attribute-nesting: 1
   force-element-nesting: 1
-  force-pseudo-nesting: 1
+  force-pseudo-nesting: 0
 
    # Name Formats
   class-name-format:

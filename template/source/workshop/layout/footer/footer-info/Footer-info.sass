@@ -10,34 +10,10 @@
     height: 55px
     margin-bottom: 25px
     color: $white
-    font-size: 15px
+    font-size: 1.5rem
     font-weight: bold
     cursor: default
 
   &__list
     display: block
     width: 100%
-
-  &__item
-    display: flex
-    margin-bottom: 5px
-
-  &__icon
-    margin-right: 10px
-    color: $white
-
-  &__text
-    +rem(font-size, 14px)
-    color: $white
-    font-weight: 100
-    line-height: 1.8
-    cursor: default
-
-    @at-root a#{&}
-      transition: .2s
-      text-decoration: none
-      cursor: pointer
-
-      &:hover
-        color: $robins-egg-blue
-

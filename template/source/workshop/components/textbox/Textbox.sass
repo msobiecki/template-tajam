@@ -1,0 +1,66 @@
+.textbox
+  display: flex
+  position: relative
+  width: 100%
+  background-color: $white
+  overflow: hidden
+
+  &__content
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 65px 0
+    +max(767px)
+      padding: 30px 0
+
+  &__container
+    +container
+
+  &__box
+    display: flex
+    width: 100%
+
+    +max(610px)
+      flex-wrap: wrap
+
+  &__imagebox
+    display: block
+    flex-shrink: 0
+    width: 50%
+    padding-right: 15px
+    +max(610px)
+      width: 100%
+      padding-right: 0
+
+  &__image
+    display: block
+    width: 100%
+    margin: 0 auto 15px
+
+  &__textbox
+    display: block
+    width: 100%
+
+  &__title
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    color: $ship-gray
+    font-size: 2.2rem
+    font-weight: bold
+    text-align: left
+    cursor: default
+
+    +font-playfair
+
+  &__text
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    color: $ship-gray
+    font-size: 1.4rem
+    font-weight: normal
+    text-align: left
+    cursor: default

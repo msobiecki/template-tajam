@@ -11,7 +11,7 @@
     height: 55px
     margin-bottom: 25px
     color: $white
-    font-size: 15px
+    font-size: 1.5rem
     font-weight: bold
     cursor: default
 
@@ -41,21 +41,31 @@
       color: $white-50
 
 
+    &.-error
+      border: 1px solid $persian-red
+
     &:focus
       border: 1px solid $robins-egg-blue
 
-  &__button
+  &__alert
     display: block
-    flex-shrink: 0
-    width: 70px
-    height: 45px
-    transition: 0.2s
-    border: 1px solid $white-50
-    background-color: $white-50
-    color: $black
-    cursor: pointer
+    width: 100%
+    margin: 10px 0 0
+    color: $white
+    font-size: 1.2rem
+
+  &__button
+    display: block !important
+    flex-shrink: 0 !important
+    width: 70px !important
+    height: 45px !important
+    transition: 0.2s !important
+    border: 1px solid $white-50 !important
+    background-color: $white-50 !important
+    color: $black !important
+    cursor: pointer !important
 
     &:hover
-      border: 1px solid $robins-egg-blue
-      background-color: $white
-      color: $robins-egg-blue
+      border: 1px solid $robins-egg-blue !important
+      background-color: $white !important
+      color: $robins-egg-blue !important

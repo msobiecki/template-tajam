@@ -1,0 +1,88 @@
+.headline
+  display: block
+  position: relative
+  width: 100%
+  height: 260px
+  overflow: hidden
+
+  +max(767px)
+    height: 360px
+
+
+  &__overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+
+    &::after
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(135deg, $black-rock-85 0%, $valhalla 100%)
+      content: ""
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d909062f', endColorstr='#d9301d5e',GradientType=1 )
+
+    .video-react
+      height: 100% !important
+      padding: 0 !important
+
+    .video-react-video
+      display: block
+      position: absolute !important
+      top: 50%    !important
+      left: 50%   !important
+      width: initial !important
+      min-width: 100%
+      height: initial !important
+      min-height: 100%
+      transform: translate(-50%, -50%)
+
+    .video-react-big-play-button
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+
+    .video-react-control-bar
+      display: none !important
+
+  &__background
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    width: auto !important
+    min-width: 100%
+    min-height: 100%
+    transform: translate(-50%, -50%)
+
+  &__content
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    z-index: 2
+
+  &__box
+    +container
+
+  &__title
+    display: block
+    position: relative
+    width: 100%
+    margin-bottom: 15px
+    padding-bottom: 15px
+    color: $white
+    font-size: 4.8rem
+    font-weight: bold
+    text-align: left
+    cursor: default
+
+    +font-playfair

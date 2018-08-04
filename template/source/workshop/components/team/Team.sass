@@ -1,0 +1,132 @@
+.team
+  display: flex
+  position: relative
+  width: 100%
+  background-color: $bunting
+  overflow: hidden
+
+  &__overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+
+    &::after
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(135deg, $black-rock-85 0%, $valhalla 100%)
+      content: ""
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d909062f', endColorstr='#d9301d5e',GradientType=1 )
+
+  &__background
+    display: block
+    position: absolute
+    top: 50%
+    left: 50%
+    min-width: 100%
+    min-height: 100%
+    transform: translate(-50%, -50%)
+
+  &__content
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    width: 100%
+    padding: 65px 0
+    +max(767px)
+      padding: 30px 0
+
+  &__container
+    +container
+
+  &__titlebox
+    display: inline-block
+    position: relative
+    width: 100%
+    margin-bottom: 45px
+
+    &::after
+      display: block
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 50px
+      height: 1px
+      transform: translate(-50%, 0)
+      background-color: $white
+      content: ""
+      opacity: 0.2
+
+  &__title
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    color: $white
+    font-size: 2.2rem
+    font-weight: bold
+    text-align: center
+    cursor: default
+
+    +font-playfair
+
+  &__subtitle
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    color: $white
+    font-size: 1.4rem
+    font-weight: normal
+    text-align: center
+    cursor: default
+
+    +font-playfair
+
+  &__box
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
+
+  &__item
+    display: block
+    width: 25%
+    padding: 5px 5px 15px
+
+    +max(969px)
+      width: 33.33%
+
+    +max(767px)
+      width: 50%
+
+    +max(610px)
+      width: 100%
+
+  &__footer
+    display: block
+    width: 100%
+    padding: 25px 0 0
+
+  &__text
+    display: block
+    width: 100%
+    margin-bottom: 25px
+    color: $white
+    font-size: 1.4rem
+    font-weight: normal
+    text-align: center
+    cursor: default
+
+  &__navigation
+    display: block
+    width: 100%
+    text-align: center
+
+  &__button
+    +btn
+
+
